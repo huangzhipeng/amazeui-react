@@ -146,6 +146,9 @@ gulp.task('docs:copy:html', function() {
       // return isProduction ? '/react/' + file : file;
       return isProduction ? 'http://a.static.amazeui.org/assets/react/' + file : file;
     }))
+    .pipe($.replace(/<script id="stat">[\s\S]*<\/script>/g, function(match) {
+      return isProduction ? match : '';
+    }))
     .pipe($.replace(/__UICDN__/g, function(match, $1) {
       return isProduction ? 'http://cdn.amazeui.org/amazeui/2.4.0/' : '';
     }))
