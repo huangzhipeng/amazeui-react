@@ -6,16 +6,16 @@ var sliderIntance = (
   <Slider onSelect={onSelect}>
     <Slider.Item>
       <img
-        src="http://s.cn.bing.net/az/hprichbg/rb/TheLuxorHotel_ZH-CN12121725266_1920x1080.jpg"/>
+        src="http://7jpqbr.com1.z0.glb.clouddn.com/bing-1.jpg"/>
     </Slider.Item>
     <Slider.Item><img
-      src="http://s.cn.bing.net/az/hprichbg/rb/MovingWalkway_ZH-CN9842297711_1920x1080.jpg"/></Slider.Item>
+      src="http://7jpqbr.com1.z0.glb.clouddn.com/bing-2.jpg"/></Slider.Item>
     <Slider.Item>
       <img
-        src="http://global.bing.com/az/hprichbg/rb/UchisarCastle_EN-US10838608428_1920x1080.jpg"/></Slider.Item>
+        src="http://7jpqbr.com1.z0.glb.clouddn.com/bing-3.jpg"/></Slider.Item>
     <Slider.Item>
       <img
-        src="http://global.bing.com/az/hprichbg/rb/DumbartonOaksGardens_EN-US12360736195_1920x1080.jpg"/></Slider.Item>
+        src="http://7jpqbr.com1.z0.glb.clouddn.com/bing-4.jpg"/></Slider.Item>
   </Slider>
 );
 
