@@ -7,6 +7,7 @@ var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var RouteHandler = Router.RouteHandler;
 
+var GoTop = require('../src/GoTop');
 var production = require('./utils').isProduction;
 var DocHeader = require('./zero/DocHeader');
 var DocFooter = require('./zero/DocFooter');
@@ -18,6 +19,7 @@ var App = React.createClass({
         <DocHeader />
         <RouteHandler />
         <DocFooter />
+        <GoTop theme="fixed" autoHide icon="arrow-up" />
       </div>
     );
   }
