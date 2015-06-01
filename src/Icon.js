@@ -21,7 +21,7 @@ var Icon = React.createClass({
   getDefaultProps: function() {
     return {
       classPrefix: 'icon',
-      componentTag: 'i'
+      componentTag: 'span'
     };
   },
 
