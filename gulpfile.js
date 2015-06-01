@@ -143,8 +143,8 @@ gulp.task('docs:copy:html', function() {
 
         file = $1.replace(extname, '.') + $2 + extname;
       }
-      return isProduction ? '/react/' + file : file;
-      // return 'http://a.static.amazeui.org/assets/react/' + file;
+      // return isProduction ? '/react/' + file : file;
+      return isProduction ? 'http://a.static.amazeui.org/assets/react/' + file : file;
     }))
     .pipe($.replace(/__UICDN__/g, function(match, $1) {
       return isProduction ? 'http://cdn.amazeui.org/amazeui/2.4.0/' : '';
