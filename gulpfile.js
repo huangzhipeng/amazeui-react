@@ -191,7 +191,7 @@ gulp.task('npm:clean', function(cb) {
 });
 
 gulp.task('npm:jsx', function() {
-  return gulp.src('src/**/*.js')
+  return gulp.src(['src/**/*.js', '!src/__tests__/*.js'])
     .pipe($.if(function(file) {
       return file.path.indexOf('AMUIReact.js') > -1;
     }, $.replace('__VERSION__', pkg.version)))
