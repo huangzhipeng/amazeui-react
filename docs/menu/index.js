@@ -17,7 +17,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <Doc>
-        <h1>Navbar</h1>
+        <h1>Menu</h1>
         <hr/>
         <h2>组件介绍</h2>
         <Markdown>{require('./01-intro.md')}</Markdown>
