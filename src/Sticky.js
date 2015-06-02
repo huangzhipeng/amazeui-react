@@ -7,6 +7,7 @@ var ClassNameMixin = require('./mixins/ClassNameMixin');
 var Events = require('./utils/Events');
 var debounce = require('./utils/debounce');
 var domUtils = require('./utils/domUtils');
+var getCurFrameInfo = require('./utils/getCurFrameInfo');
 
 var Sticky = React.createClass({
   mixins: [ClassNameMixin],
@@ -45,9 +46,11 @@ var Sticky = React.createClass({
     this._init();
     this.checkPosition();
 
-    this._scrollListener = Events.on(window, 'scroll',
+    var curWindow = getCurFrameInfo(React.findDOMNode(this.refs.sticker)).curWindow;
+
+    this._scrollListener = Events.on(curWindow, 'scroll',
       debounce(this.checkPosition, 10).bind(this));
-    this._resizeListener = Events.on(window, 'resize',
+    this._resizeListener = Events.on(curWindow, 'resize',
       debounce(this.checkPosition, 50).bind(this));
   },
 
