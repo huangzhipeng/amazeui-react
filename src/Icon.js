@@ -26,14 +26,11 @@ var Icon = React.createClass({
   },
 
   render: function() {
-    var classes = this.getClassSet();
+    var classes = this.getClassSet(true);
     var props = this.props;
     var Component = props.href ? 'a' : props.componentTag;
     var prefixClass = this.prefixClass;
     var setClassNamespace = this.setClassNamespace;
-
-    // del am-icon
-    classes[setClassNamespace(props.classPrefix)] = false;
 
     // am-icon-[iconName]
     classes[prefixClass(props.icon)] = true;
